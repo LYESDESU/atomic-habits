@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Habits | James Clear - Build Good Habits, Break Bad Ones</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Icons (Lucide) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Scroll Animations (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <style>
+        :root {
+            --cream: #FCF9F4;
+            --navy: #1A1F2C;
+            --gold: #D4A017;
+            --gold-hover: #B38612;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--navy);
+        }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        @keyframes pulse-subtle {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        .cta-pulse {
+            animation: pulse-subtle 3s infinite ease-in-out;
+        }
+        .bg-cream { background-color: var(--cream); }
+        .text-navy { color: var(--navy); }
+        .bg-navy { background-color: var(--navy); }
+        .bg-gold { background-color: var(--gold); }
+        .btn-primary {
+            background-color: var(--gold);
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 15px -3px rgba(212, 160, 23, 0.3);
+        }
+        .btn-primary:hover {
+            background-color: var(--gold-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 20px 25px -5px rgba(212, 160, 23, 0.4);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 1. HERO SECTION -->
+    <section class="relative px-6 pt-16 pb-20 md:pt-28 md:pb-32 overflow-hidden">
+        <div class="container mx-auto max-w-7xl">
+            <div class="flex flex-col items-center gap-12 lg:flex-row">
+                <!-- Left: Book Cover -->
+                <div class="w-full lg:w-1/2 flex justify-center" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="relative group">
+                        <div class="absolute -inset-2 bg-gradient-to-r from-[#D4A017] to-[#1A1F2C] rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                        <img 
+                            src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" 
+                            alt="Atomic Habits Book Cover" 
+                            class="relative w-64 md:w-96 rounded-lg shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
+                        >
+                    </div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left" data-aos="fade-left" data-aos-duration="1000">
+                    <div class="flex items-center justify-center lg:justify-start gap-2 mb-6">
+                        <span class="bg-navy text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Bestseller</span>
+                        <div class="flex text-[#D4A017]">
+                            <i data-lucide="star" fill="currentColor" size="16"></i>
+                            <i data-lucide="star" fill="currentColor" size="16"></i>
+                            <i data-lucide="star" fill="currentColor" size="16"></i>
+                            <i data-lucide="star" fill="currentColor" size="16"></i>
+                            <i data-lucide="star" fill="currentColor" size="16"></i>
+                        </div>
+                        <span class="text-sm font-medium text-gray-500">(149,396 ratings)</span>
+                    </div>
+                    
+                    <h1 class="mb-6 text-4xl font-serif font-bold leading-tight md:text-6xl text-navy">
+                        Atomic Habits: <span class="text-[#D4A017]">An Easy & Proven Way</span> to Build Good Habits
+                    </h1>
+                    
+                    <p class="mb-10 text-xl text-gray-700 font-sans leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        The #1 New York Times Bestseller — Over 25M+ copies sold. Discover how tiny changes can lead to remarkable results.
+                    </p>
+
+                    <div class="flex flex-col items-center lg:items-start gap-8">
+                        <!-- الرابط الخاص بك هنا -->
+                        <a href="https://apkverify.site/cl/i/o4m4xn" class="btn-primary cta-pulse px-10 py-5 text-xl font-bold rounded-full inline-flex items-center gap-3">
+                            Get Your Copy Now
+                            <i data-lucide="chevron-right"></i>
+                        </a>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-sm text-gray-500 font-medium">
+                            <div class="flex items-center gap-2"><i data-lucide="check-circle" class="text-green-600" size="18"></i> Free with trial</div>
+                            <div class="flex items-center gap-2"><i data-lucide="zap" class="text-green-600" size="18"></i> Instant access</div>
+                            <div class="flex items-center gap-2"><i data-lucide="shield-check" class="text-green-600" size="18"></i> Verified Secure</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. SOCIAL PROOF BAR -->
+    <div class="py-12 border-y border-gray-200 bg-white">
+        <div class="container mx-auto px-6">
+            <p class="text-center text-xs font-bold uppercase tracking-[0.3em] text-gray-400 mb-8">As Seen In</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-20 opacity-40 grayscale">
+                <span class="text-2xl font-serif font-bold italic">Forbes</span>
+                <span class="text-2xl font-serif font-bold tracking-tighter">The New York Times</span>
+                <span class="text-2xl font-sans font-black italic">WSJ</span>
+                <span class="text-xl font-sans font-bold">Amazon Charts</span>
+                <span class="text-2xl font-serif font-light">TIME</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. PROBLEM/HOOK SECTION -->
+    <section class="py-24 bg-navy text-white">
+        <div class="container mx-auto max-w-4xl px-6 text-center" data-aos="zoom-in">
+            <h2 class="mb-8 text-3xl font-serif md:text-5xl leading-tight">
+                If You're Struggling to Change, <br>
+                <span class="text-[#D4A017]">The Problem Isn't You.</span>
+            </h2>
+            <div class="w-20 h-1 bg-[#D4A017] mx-auto mb-10"></div>
+            <p class="text-xl md:text-2xl font-light leading-relaxed mb-12 text-gray-300">
+                "It's your system. Bad habits repeat because you have the wrong system for change. 
+                <span class="text-white font-semibold italic">You don't rise to the level of your goals — you fall to the level of your systems."</span>
+            </p>
+            <div class="inline-block p-1 rounded-full bg-white/5 border border-white/10">
+                <div class="flex items-center gap-4 px-6 py-3">
+                    <i data-lucide="alert-circle" class="text-[#D4A017]"></i>
+                    <span class="text-sm uppercase tracking-widest font-bold">Stop fighting willpower. Start using systems.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHAT YOU'LL LEARN -->
+    <section class="py-24 bg-cream">
+        <div class="container mx-auto max-w-6xl px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-navy mb-4">What You'll Master</h2>
+                <p class="text-gray-500">The framework used by gold medalists and business leaders.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100" data-aos="fade-up">
+                    <div class="text-[#D4A017] mb-6"><i data-lucide="clock" size="32"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-navy">Make Time</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">How to make time for new habits even when life gets crazy.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-[#D4A017] mb-6"><i data-lucide="scissors" size="32"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-navy">Break Loops</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Identify the cues that trigger your bad habits and cut them off.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-[#D4A017] mb-6"><i data-lucide="layout" size="32"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-navy">Environment</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">Design your surroundings to make success the path of least resistance.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-[#D4A017] mb-6"><i data-lucide="refresh-cw" size="32"></i></div>
+                    <h3 class="text-xl font-bold mb-4 text-navy">Get Back Up</h3>
+                    <p class="text-gray-600 leading-relaxed text-sm">How to get back on track immediately when you fall off course.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. AUTHOR SECTION -->
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="container mx-auto max-w-5xl px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden flex-shrink-0 rotate-3 shadow-2xl" data-aos="fade-right">
+                    <img src="https://m.media-amazon.com/images/I/91bYsX41DVL.jpg" alt="James Clear" class="w-full h-full object-cover">
+                </div>
+                <div data-aos="fade-left">
+                    <h2 class="text-3xl font-serif font-bold mb-6">Meet the Author</h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        James Clear is one of the world's leading experts on habit formation. His work is focused on how we can live better through tiny, repeatable actions. He is a regular speaker at Fortune 500 companies and his work has been used by teams in the NBA, NFL, and MLB.
+                    </p>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-8 pt-8 border-t border-gray-100">
+                        <div>
+                            <div class="text-3xl font-bold text-[#D4A017]">25M+</div>
+                            <div class="text-xs uppercase tracking-widest text-gray-400 font-bold">Books Sold</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-[#D4A017]">60+</div>
+                            <div class="text-xs uppercase tracking-widest text-gray-400 font-bold">Languages</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-[#D4A017]">4.8/5</div>
+                            <div class="text-xs uppercase tracking-widest text-gray-400 font-bold">Avg Rating</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. TESTIMONIALS -->
+    <section class="py-24 bg-cream">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-serif text-center mb-16 text-navy">What Readers Say</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <div class="flex text-[#D4A017] mb-6"><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i></div>
+                        <p class="text-gray-700 italic leading-relaxed mb-8">"This book changed my life. I finally understand why my past resolutions failed and how to actually stick to my routine."</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center font-bold text-navy">S</div>
+                        <div><div class="font-bold text-navy text-sm">Sarah J.</div><div class="text-gray-400 text-xs uppercase">Manager</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+                    <div>
+                        <div class="flex text-[#D4A017] mb-6"><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i></div>
+                        <p class="text-gray-700 italic leading-relaxed mb-8">"Practical, actionable, and based on science. No fluff. Just a clear roadmap to becoming the person you want to be."</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center font-bold text-navy">M</div>
+                        <div><div class="font-bold text-navy text-sm">Mark T.</div><div class="text-gray-400 text-xs uppercase">Founder</div></div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="flex text-[#D4A017] mb-6"><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i><i data-lucide="star" fill="currentColor" size="14"></i></div>
+                        <p class="text-gray-700 italic leading-relaxed mb-8">"The concept of 1% better every day is so simple yet so powerful. Highly recommend for any peak performer."</p>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 bg-navy/10 rounded-full flex items-center justify-center font-bold text-navy">E</div>
+                        <div><div class="font-bold text-navy text-sm">Elena R.</div><div class="text-gray-400 text-xs uppercase">Athlete</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FINAL CTA -->
+    <section class="py-24 bg-navy relative overflow-hidden text-center px-6">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-0 left-0 w-64 h-64 bg-gold rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+            <div class="absolute bottom-0 right-0 w-96 h-96 bg-gold rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+        </div>
+
+        <div class="relative z-10 container mx-auto max-w-3xl" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-serif text-white mb-6 italic">Start Building Better Habits Today</h2>
+            <p class="text-[#D4A017] font-bold text-xl mb-10 tracking-wide uppercase">Limited Time Offer: Get the Workbook Free</p>
+            
+            <div class="mb-10 inline-flex items-center gap-3 px-6 py-2 border border-white/20 rounded-full text-white/60 text-sm font-mono">
+                Deal expires in: <span id="countdown" class="text-white font-bold">09:59</span>
+            </div>
+
+            <div class="flex flex-col items-center gap-6">
+                <!-- الرابط الخاص بك هنا أيضاً -->
+                <a href="https://apkverify.site/cl/i/o4m4xn" class="btn-primary cta-pulse px-16 py-6 text-2xl font-bold rounded-full w-full sm:w-auto">
+                    Get Instant Access
+                </a>
+                <p class="text-gray-500 text-sm">Join over 1 million newsletter subscribers and 25 million readers.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. FOOTER -->
+    <footer class="py-16 bg-cream border-t border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-10">
+                <div class="text-navy font-serif font-bold text-2xl tracking-tighter">Atomic Habits</div>
+                <div class="flex gap-10 text-sm text-gray-500 font-bold uppercase tracking-widest">
+                    <a href="#" class="hover:text-[#D4A017] transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-[#D4A017] transition-colors">Terms</a>
+                    <a href="#" class="hover:text-[#D4A017] transition-colors">Support</a>
+                </div>
+                <div class="text-xs text-gray-400 font-medium">
+                    © atomichabitsplan. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script>
+        lucide.createIcons();
+        AOS.init({ duration: 800, once: true, offset: 100 });
+        function startTimer(duration, display) {
+            var timer = duration, minutes, seconds;
+            setInterval(function () {
+                minutes = parseInt(timer / 60, 10);
+                seconds = parseInt(timer % 60, 10);
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
+                display.textContent = minutes + ":" + seconds;
+                if (--timer < 0) { timer = duration; }
+            }, 1000);
+        }
+        window.onload = function () {
+            var tenMinutes = 60 * 10, display = document.querySelector('#countdown');
+            startTimer(tenMinutes, display);
+        };
+    </script>
+</body>
+</html>
